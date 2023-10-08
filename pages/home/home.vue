@@ -126,7 +126,6 @@
 			this.getAllService();
 			this.getNewsList();
 			this.getHotNews({hot: "Y"});
-		
 		},
 		methods: {
 			// 搜索
@@ -175,7 +174,6 @@
 					console.log("排序后",this.AllServiceList);
 				})
 			},
-			
 			// 自定义排序规则
 			sortBy(property) {
 				return function(value1,value2) {
