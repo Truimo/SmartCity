@@ -1,17 +1,137 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+		    "path" : "pages/guide_page/guide_page",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "引导页",
+		        "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+					
+				}
+		    }
+		    
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
 		}
-	],
+	    
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "首页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userHome/userHome",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人中心",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userHome/userInformation/userInformation",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userHome/userPwd/userPwd",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改密码",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userHome/orderList/orderList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单列表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/userHome/feedBack/feedBack",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "意见反馈",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/swiperDetail/swiperDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新闻详情页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/newsDetail/newsDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新闻详情页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/shouye@2x.png",
+				"selectedIconPath": "static/images/tabbar/shouye-2@2x.png",
+				"text": "首页"
+			},
+			{
+				// "pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/全部服务.png",
+				"selectedIconPath": "static/images/tabbar/全部服务-1.png",
+				"text": "全部服务"
+			},
+			{
+				// "pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/shouye@2x.png",
+				"selectedIconPath": "static/images/tabbar/shouye-2@2x.png",
+				"text": "中国智造"
+			},
+			{
+				// "pagePath": "pages/home/home",
+				"iconPath": "static/images/tabbar/新闻.png",
+				"selectedIconPath": "static/images/tabbar/新闻-1.png",
+				"text": "新闻"
+			},
+			{
+				"pagePath": "pages/userHome/userHome",
+				"iconPath": "static/images/tabbar/个人中心.png",
+				"selectedIconPath": "static/images/tabbar/个人中心-1.png",
+				"text": "个人中心"
+			}
+		]
+	}
 }
