@@ -148,21 +148,19 @@
 			},
 			// 新闻分类
 			getNewsClassify() {
-				this.$utils.h("/prod-api/press/category/list","GET").then(res => {
+				this.$api.getPressCategoryList().then(res => {
 					// console.log(res.data);
 					this.newsList = res.data
 					console.log("新闻分类",this.newsList);
 					this.newsList.forEach(e => {
 						this.newsClassify.push(e.name)
 					})
-					
 					console.log("新闻分类2",this.newsClassify);
-					
 				})
 			},
 			// 获取全部服务
 			getAllService() {
-				this.$utils.h("/prod-api/api/service/list","GET").then(res => {
+				this.$api.getServiceList().then(res => {
 					// console.log(res.data,"11");
 					this.AllServiceList = res.rows
 					// console.log(res.rows,"22");
@@ -181,16 +179,14 @@
 				}
 			},
 			getNewsList() {
-				this.$utils.h("/prod-api/press/press/list","GET").then(res => {
+				this.$api.getPressList().then(res => {
 					this.newsList = res.rows
 					console.log("新闻列表",this.newsList);
 				})
 			},
-			
-			//获取热点新闻列表/prod-api/press/press/list
 			getHotNews(data) {
 				// const data = data
-				this.$utils.h("/prod-api/press/press/list","GET",data).then(res => {
+				this.$api.getPressList(data).then(res => {
 					// console.log("sss",res.rows);
 					this.hotNewsList = res.rows
 				})
@@ -200,7 +196,6 @@
 					url: "/pages/newsDetail/newsDetail?id=" + id
 				})
 			}
-			
 		}
 	}
 </script>
