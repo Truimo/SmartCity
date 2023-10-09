@@ -144,7 +144,7 @@
 			goSwiperDetail(id,moduleName) {
 				console.log(id,moduleName);
 				uni.navigateTo({
-					url: "/pages/swiperDetail/swiperDetail?id=" + id
+					url: "/pages/swiper-detail/swiper-detail?id=" + id
 				})
 			},
 			// 新闻分类
