@@ -193,7 +193,7 @@
 			},
 			goNewsDetail(id) {
 				uni.navigateTo({
-					url: "/pages/newsDetail/newsDetail?id=" + id
+					url: "/pages/news/detail?id=" + id
 				})
 			}
 		}

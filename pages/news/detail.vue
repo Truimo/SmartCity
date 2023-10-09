@@ -9,10 +9,9 @@
 		data() {
 			return {
 				id: ''
-			};
+			}
 		},
 		onLoad(e) {
-			// console.log(e.id);
 			this.id = e.id
 		}
 	}

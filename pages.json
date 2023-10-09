@@ -58,6 +58,12 @@
                 "enablePullDownRefresh": false
             }
         }, {
+            "path": "pages/news/detail",
+            "style": {
+                "navigationBarTitleText": "新闻详情页",
+                "enablePullDownRefresh": false
+            }
+        }, {
             "path": "pages/news-detail/news-detail",
             "style": {
                 "navigationBarTitleText": "新闻详情页",

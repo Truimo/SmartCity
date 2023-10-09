@@ -1,32 +1,37 @@
 <template>
 	<view>
-		
-		<uni-section class="mb-10" :title="list.title" :sub-title="list.subTitle || '暂无'">
-			<text style="padding: 12px 10px;">发布日期: {{list.publishDate}}</text>
+		<uni-section class="mb-10" :title="title" :sub-title="subTitle || '暂无'">
+			<text style="padding: 12px 10px;">发布日期: {{publishDate}}</text>
 		</uni-section>
 		<view class="newsBox">
-			<image :src="`http://124.93.196.45:10001${list.cover}`" mode="widthFix"></image>
-			<rich-text :nodes="list.content"></rich-text>
+			<image :src="`http://124.93.196.45:10001${cover}`" mode="widthFix"></image>
+			<rich-text :nodes="content"></rich-text>
 		</view>
-		
 	</view>
 </template>
 
 <script>
 	export default {
-		name:"newsDetail",
+		name: "NewsDetail",
 		data() {
 			return {
-				list: []
-			};
+                title: '',
+                subTitle: '',
+                publishDate: '',
+                content: '',
+                cover: ''
+			}
 		},
 		props: ['id'],
 		created() {
 			console.log(this.id);
-			this.$utils.h("/prod-api/api/park/press/press/" + this.id,"GET").then(res => {
-				// console.log(res.data);
-				this.list = res.data
-				// console.log(this.list);
+            const baseUrl = this.$api.getUrl()
+			this.$api.getParkPress(this.id).then(({ data }) => {
+				this.title = data.title
+                this.subTitle = data.subTitle
+                this.publishDate = data.publishDate
+                this.content = data.content.replace(/\/prod-api\//g, `http://${baseUrl}/prod-api/`)
+                this.cover = data.cover
 			})
 		}
 	}

@@ -86,5 +86,13 @@ export default {
         const data = Object.assign(defaultQuery, query)
         const url = '/prod-api/press/press/list'
         return this.request({ url, data })
+    },
+    /**
+     * 获取新闻详细信息
+     * @param {number} id - 新闻 id
+     */
+    getParkPress(id) {
+        const url = `/prod-api/api/park/press/press/${id}`
+        return this.request({ url })
     }
 }
