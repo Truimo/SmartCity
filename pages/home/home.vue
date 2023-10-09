@@ -134,11 +134,10 @@
 			},
 			
 			getSwiper() {
-				this.$utils.h("/prod-api/api/rotation/list","GET").then(res => {
+				this.$api.getRotationList({ type: 2 }).then(res => {
 					this.list = res.rows
 					console.log("轮播图",this.list);
 				})
-				
 			},
 			//点击轮播跳转指定页
 			goSwiperDetail(id,moduleName) {
@@ -149,7 +148,6 @@
 			},
 			// 新闻分类
 			getNewsClassify() {
-				
 				this.$utils.h("/prod-api/press/category/list","GET").then(res => {
 					// console.log(res.data);
 					this.newsList = res.data
